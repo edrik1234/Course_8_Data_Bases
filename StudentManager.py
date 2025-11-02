@@ -57,7 +57,7 @@ class StudentManager:
             output = result.fetchone()
             transaction.commit()
         if output == None:
-                raise KeyError
+            raise KeyError
         json_data = output[0]
         if isinstance(json_data, str):
             json_data = json.loads(json_data)
